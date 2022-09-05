@@ -1,0 +1,61 @@
+<style>
+    .action {
+        background-color: #6aacee;
+        border-radius: 5px;
+        border: none;
+    }
+.page-link{
+        color:yellow !important;
+        border-radius: 50% !important;
+    }
+</style>
+
+<p>You can bind our <code>NgbPagination</code> component with slicing the data list</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">SN</th>
+            <th scope="col">APPLICATION</th>
+            <th scope="col">SERVERS MAPPED</th>
+            <th scope="col">LAST SCAN DATE</th>
+            <th scope="col">STATUS</th>
+            <th scope="col">ACTION</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let country of countries">
+            <th scope="row">{{ country.id }}</th>
+            <td>
+                <!-- <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="me-2" style="width: 20px"> -->
+                {{ country.application}}
+            </td>
+            <td>{{ country.server }}</td>
+            <td>{{ country.scandate }}</td>
+            <td>
+                <!-- <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="me-2" style="width: 20px"> -->
+                <img width="40" alt="Angular Logo" src="../assets/smackcheck.png" />
+                {{ country.status }}
+            </td>
+            <td><button class="action">{{ country.action }}
+
+                </button>
+                <img width="40" alt="Angular Logo" src="../assets/smackcheck.png" />
+            </td>
+
+
+        </tr>
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-center p-2">
+    <p>Previous</p>
+    <ngb-pagination class="page" [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+        (pageChange)="refreshCountries()">
+    </ngb-pagination>
+    <p>Next</p>
+
+  
+</div>

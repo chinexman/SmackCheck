@@ -1,0 +1,39 @@
+ <!-- <div class="d-inline-block" >
+    <button type="button" class="btn btn-outline-primary me-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">Toggle dropdown</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownManual">
+      <button ngbDropdownItem>Action - 1</button>
+      <button ngbDropdownItem>Another Action</button>
+      <button ngbDropdownItem>Something else is here</button>
+    </div>
+  </div>  -->
+ <style>
+
+   .row{
+     display: flex;
+     flex-direction: row;
+     
+    }
+
+    .btn{
+      color:black;
+      border: 1px solid black;
+    margin-right: 20px;
+    border-radius: 0px;
+    }
+    </style>
+
+  <div class="card-container">
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline" id="dropdownBasic1" ngbDropdownToggle>Active Status</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Active</button>
+          <button ngbDropdownItem>Inactive</button>
+          <button ngbDropdownItem>All</button>
+        </div>
+      </div>
+    
+
+   
+  
+   
+  </div>

@@ -1,0 +1,55 @@
+ <!-- <div class="d-inline-block" >
+    <button type="button" class="btn btn-outline-primary me-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">Toggle dropdown</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownManual">
+      <button ngbDropdownItem>Action - 1</button>
+      <button ngbDropdownItem>Another Action</button>
+      <button ngbDropdownItem>Something else is here</button>
+    </div>
+  </div>  -->
+ <style>
+
+   .row{
+     display: flex;
+     flex-direction: row;
+     
+    }
+
+    .btn{
+      color:black;
+      border: 1px solid black;
+    margin-right: 20px;
+    border-radius: 0px;
+    }
+    </style>
+
+  <div class="card-container">
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline" id="dropdownBasic1" ngbDropdownToggle>All Application</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>All Application</button>
+          <button ngbDropdownItem>Application name1</button>
+          <button ngbDropdownItem>Application name2</button>
+        </div>
+      </div>
+    
+
+    <div ngbDropdown class="d-inline-block">
+      <button type="button" class="btn btn-outline" id="dropdownBasic1" ngbDropdownToggle>All servers</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>All servers</button>
+        <button ngbDropdownItem>Server 1</button>
+        <button ngbDropdownItem>Server 2</button>
+      </div>
+    </div>
+
+    <div ngbDropdown class="d-inline-block">
+      <button type="button" class="btn btn-outline" id="dropdownBasic1" ngbDropdownToggle>Health check status</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>All status</button>
+        <button ngbDropdownItem>Healthy</button>
+        <button ngbDropdownItem>Critical</button>
+      </div>
+    </div>
+  
+   
+  </div>

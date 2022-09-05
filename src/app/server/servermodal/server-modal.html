@@ -1,0 +1,68 @@
+<style>
+    .action {
+        background-color: #6aacee;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .cancel {
+        margin-right: 20px;
+    }
+
+    .input-group {
+        width: 80%;
+        margin-left: 20%;
+    }
+</style>
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Create a server</h4>
+    </div>
+    <div class="modal-body">
+        <p>Enter server details</p>
+        <form>
+            <div class="mb-3">
+                <div class="input-group">
+                    <span>
+                        <p class="cancel">Server name</p>
+                    </span> <input id="servername" class="form-control" name="dp" ngbDatepicker #dp="ngbDatepicker">
+                </div>
+
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <span>
+                        <p class="cancel">Server Ip</p>
+                    </span> <input id="serverip" class="form-control" name="dp" ngbDatepicker #dp="ngbDatepicker">
+                </div>
+
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <span>
+                        <p class="cancel">CPU</p>
+                    </span> <input id="CPU" class="form-control" name="dp" ngbDatepicker #dp="ngbDatepicker">
+                </div>
+
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <span>
+                        <p class="cancel">Storage</p>
+                    </span> <input id="storage" class="form-control" name="dp" ngbDatepicker #dp="ngbDatepicker">
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark cancel "
+            (click)="modal.dismiss('Cross click')">cancel</button>
+
+        <button type="button" class="btn action" (click)="modal.close('Save click')">Create</button>
+    </div>
+</ng-template>
+
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
+<button class="action " (click)="open(content)">Create Server</button>
